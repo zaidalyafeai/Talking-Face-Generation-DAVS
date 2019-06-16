@@ -69,7 +69,7 @@ class IdentityEncoder(nn.Module):
 
     def forward(self, x):
         x = x.view(-1, self.opt.image_channel_size, self.opt.image_size, self.opt.image_size)
-        net0 = self._modules['block' + str(01)](x)
+        net0 = self._modules['block' + str('01')](x)
         net1 = self.pool1(net0)
         for j1 in range(11, 15):
             net1 = self._modules['block' + str(j1)](net1)
