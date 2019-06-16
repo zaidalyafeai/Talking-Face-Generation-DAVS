@@ -43,7 +43,7 @@ class IdentityEncoder(nn.Module):
     def __init__(self, opt=opt):
         super(IdentityEncoder, self).__init__()
         self.opt = opt
-        self.add_module('block' + str(01), BasicBlock(3, 32, name="01", conv_std=0.025253814, kernel_size=7, stride=2, padding=3))
+        self.add_module('block' + str('01'), BasicBlock(3, 32, name="01", conv_std=0.025253814, kernel_size=7, stride=2, padding=3))
         self.pool1 = nn.MaxPool2d(2, 2)
         self.add_module('block' + str(11), BasicBlock(32, 32, name="11", conv_std=0.058925565))
         self.add_module('block' + str(12), BasicBlock(32, 32, name="12", conv_std=0.058925565))
